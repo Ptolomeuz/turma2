@@ -1,0 +1,266 @@
+print("Hello world")
+
+2
+numero = int(input("insira um numero:"))
+print("numero é:",numero)
+
+3
+numero1 =float(input("insira um valor: "))
+numero2=float(input("insira um valor: "))
+soma=numero1+numero2
+
+print("valor é: ",soma)
+
+4
+nota1 =float(input("insira um valor: "))
+nota2 =float(input("insira um valor: "))
+nota3 =float(input("insira um valor: "))
+nota4 =float(input("insira um valor: "))
+media = (nota1+nota2+nota3+nota4) / 4
+print("valor é: ",media)
+
+5
+metros =float(input ("insira um valor: "))
+centimetros = metros * 100
+
+print(f"{metros} metros é igual a {centimetros} centimetros")
+
+6
+raio = float(input("Digite o raio do círculo: "))
+
+area = math.pi * raio ** 2
+
+print(f"A área do círculo com raio {raio} é {area:.2f}")
+
+7
+def calcular_area_quadrado(lado):
+    area = lado ** 2
+    return area
+
+def mostrar_dobro_area(area):
+    dobro_area = area * 2
+    return dobro_area
+
+lado = float(input("Digite o valor do lado do quadrado: "))
+
+area = calcular_area_quadrado(lado)
+
+dobro_area = mostrar_dobro_area(area)
+
+print(f"A área do quadrado é: {area}")
+print(f"O dobro da área do quadrado é: {dobro_area}")
+
+8
+def calcular_salario_mensal(valor_hora, horas_trabalhadas):
+    salario_mensal = valor_hora * horas_trabalhadas
+    return salario_mensal
+
+valor_hora = float(input("Digite o valor da sua hora de trabalho: "))
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas por mês: "))
+
+salario_mensal = calcular_salario_mensal(valor_hora, horas_trabalhadas)
+
+print(f"O seu salário mensal é: R$ {salario_mensal:.2f}")
+
+9
+def fahrenheit_para_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5.0/9.0
+    return celsius
+
+fahrenheit = float(input("Digite a temperatura em graus Fahrenheit: "))
+
+celsius = fahrenheit_para_celsius(fahrenheit)
+
+print(f"A temperatura em graus Celsius é: {celsius:.2f}°C")
+
+10
+def celsius_para_fahrenheit(celsius):
+    fahrenheit = (celsius * 9.0/5.0) + 32
+    return fahrenheit
+
+celsius = float(input("Digite a temperatura em graus Celsius: "))
+
+fahrenheit = celsius_para_fahrenheit(celsius)
+
+print(f"A temperatura em graus Fahrenheit é: {fahrenheit:.2f}°F")
+
+11
+def calcular_operacoes(num_int1, num_int2, num_real):
+    resultado1 = (2 * num_int1) * (num_int2 / 2)
+    resultado2 = (3 * num_int1) + num_real
+    resultado3 = num_real ** 3
+    return resultado1, resultado2, resultado3
+
+num_int1 = int(input("Digite o primeiro número inteiro: "))
+num_int2 = int(input("Digite o segundo número inteiro: "))
+num_real = float(input("Digite um número real: "))
+
+resultado1, resultado2, resultado3 = calcular_operacoes(num_int1, num_int2, num_real)
+
+print(f"O produto do dobro do primeiro com metade do segundo é: {resultado1}")
+print(f"A soma do triplo do primeiro com o terceiro é: {resultado2}")
+print(f"O terceiro elevado ao cubo é: {resultado3}")
+
+12
+def calcular_peso_ideal_homem(altura):
+    peso_ideal_homem = (72.7 * altura) - 58
+    return peso_ideal_homem
+
+def calcular_peso_ideal_mulher(altura):
+    peso_ideal_mulher = (62.1 * altura) - 44.7
+    return peso_ideal_mulher
+
+altura = float(input("Digite a sua altura em metros: "))
+
+peso_ideal_homem = calcular_peso_ideal_homem(altura)
+peso_ideal_mulher = calcular_peso_ideal_mulher(altura)
+
+print(f"O peso ideal para um homem com altura {altura}m é: {peso_ideal_homem:.2f} kg")
+print(f"O peso ideal para uma mulher com altura {altura}m é: {peso_ideal_mulher:.2f} kg")
+
+13
+peso = float(input("Digite o peso de peixes em quilos: "))
+
+limite = 50
+excesso = max(0, peso - limite)
+
+valor_multa_por_quilo = 4.00
+multa = excesso * valor_multa_por_quilo
+
+print(f"Peso de peixes: {peso} kg")
+print(f"Limite de peso permitido: {limite} kg")
+
+if excesso > 0:
+    print(f"Excesso de peso: {excesso} kg")
+    print(f"Valor da multa: R$ {multa:.2f}")
+else:
+    print("Não houve excesso de peso. Nenhuma multa será aplicada.")
+
+14
+def calcular_salario_bruto(valor_hora, horas_trabalhadas):
+    return valor_hora * horas_trabalhadas
+
+def calcular_desconto_ir(salario_bruto):
+    return salario_bruto * 0.11
+
+def calcular_desconto_inss(salario_bruto):
+    return salario_bruto * 0.08
+
+def calcular_desconto_sindicato(salario_bruto):
+    return salario_bruto * 0.05
+
+valor_hora = float(input("Digite o valor da sua hora de trabalho: "))
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas por mês: "))
+
+salario_bruto = calcular_salario_bruto(valor_hora, horas_trabalhadas)
+
+desconto_ir = calcular_desconto_ir(salario_bruto)
+desconto_inss = calcular_desconto_inss(salario_bruto)
+desconto_sindicato = calcular_desconto_sindicato(salario_bruto)
+
+salario_liquido = salario_bruto - (desconto_ir + desconto_inss + desconto_sindicato)
+
+print(f"Salário Bruto: R$ {salario_bruto:.2f}")
+print(f"Desconto Imposto de Renda (11%): R$ {desconto_ir:.2f}")
+print(f"Desconto INSS (8%): R$ {desconto_inss:.2f}")
+print(f"Desconto Sindicato (5%): R$ {desconto_sindicato:.2f}")
+print(f"Salário Líquido: R$ {salario_liquido:.2f}")
+
+15
+
+def calcular_quantidade_latas(area):
+    litros_necessarios = area / 3
+    latas_necessarias = math.ceil(litros_necessarios / 18)
+    return latas_necessarias
+
+def calcular_preco_total(latas_necessarias):
+    preco_por_lata = 80.00
+    preco_total = latas_necessarias * preco_por_lata
+    return preco_total
+
+area_a_ser_pintada = float(input("Digite o tamanho da área a ser pintada em metros quadrados: "))
+
+latas_necessarias = calcular_quantidade_latas(area_a_ser_pintada)
+preco_total = calcular_preco_total(latas_necessarias)
+
+print(f"Quantidade de latas de tinta necessárias: {latas_necessarias}")
+print(f"Preço total: R$ {preco_total:.2f}")
+
+16
+
+
+def calcular_quantidade_latas_galoes(area):
+    litros_necessarios = area / 6
+    latas_necessarias = math.ceil(litros_necessarios / 18)
+    galoes_necessarios = math.ceil(litros_necessarios / 3.6)
+    return latas_necessarias, galoes_necessarios
+
+def calcular_preco_situacao(situacao, latas, galoes):
+    if situacao == "latas":
+        preco_total = latas * 80.00
+    else:
+        preco_total = galoes * 25.00
+    return preco_total
+
+
+area_a_ser_pintada = float(input("Digite o tamanho da área a ser pintada em metros quadrados: "))
+
+
+latas_necessarias, galoes_necessarios = calcular_quantidade_latas_galoes(area_a_ser_pintada)
+
+
+preco_latas = calcular_preco_situacao("latas", latas_necessarias, 0)
+preco_galoes = calcular_preco_situacao("galoes", 0, galoes_necessarios)
+
+
+print(f"Quantidade de latas de tinta necessárias: {latas_necessarias}")
+print(f"Quantidade de galões de tinta necessários: {galoes_necessarios}")
+print(f"Preço comprando apenas latas de 18 litros: R$ {preco_latas:.2f}")
+print(f"Preço comprando apenas galões de 3,6 litros: R$ {preco_galoes:.2f}")
+
+17
+
+
+def calcular_quantidade_latas_galoes(area):
+    litros_necessarios = (area / 6) * 1.10  # Adiciona 10% de folga
+    latas_necessarias = math.ceil(litros_necessarios / 18)
+    galoes_necessarios = math.ceil(litros_necessarios / 3.6)
+    return latas_necessarias, galoes_necessarios
+
+def calcular_preco_situacao(situacao, latas, galoes, area):
+    if situacao == "latas":
+        preco_total = latas * 80.00
+    elif situacao == "galoes":
+        preco_total = galoes * 25.00
+    else:
+        latas_cheias = int(latas)
+        galoes_usados = int(galoes)
+        litros_faltantes = (area / 6) * 1.10 - (latas_cheias * 18 + galoes_usados * 3.6)
+        if litros_faltantes > 0:
+            galoes_usados += math.ceil(litros_faltantes / 3.6)
+        preco_total = (latas_cheias * 80.00) + (galoes_usados * 25.00)
+    return preco_total
+
+
+area_a_ser_pintada = float(input("Digite o tamanho da área a ser pintada em metros quadrados: "))
+
+
+latas_necessarias, galoes_necessarios = calcular_quantidade_latas_galoes(area_a_ser_pintada)
+
+preco_latas = calcular_preco_situacao("latas", latas_necessarias, 0, area_a_ser_pintada)
+preco_galoes = calcular_preco_situacao("galoes", 0, galoes_necessarios, area_a_ser_pintada)
+preco_misturado = calcular_preco_situacao("misturado", latas_necessarias, galoes_necessarios, area_a_ser_pintada)
+
+
+print(f"Quantidade de latas de tinta necessárias: {latas_necessarias}")
+print(f"Quantidade de galões de tinta necessários: {galoes_necessarios}")
+print(f"Preço comprando apenas latas de 18 litros: R$ {preco_latas:.2f}")
+print(f"Preço comprando apenas galões de 3,6 litros: R$ {preco_galoes:.2f}")
+print(f"Preço comprando latas e galões misturados: R$ {preco_misturado:.2f}")
+
+
+
+
+
+
+
